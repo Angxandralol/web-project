@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+:root {
+  --blanco: #FFFFFF;
+  --azulMar: #04305D;
+  --azulOceano: #04162A;
+  --azulOscuro: #020D13;
+  --negro: #000000;
+}
+
+.inicio {
+  background-image: url("../assets/fondo-uno.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 90vh;
+}
+.inicio .contenedor {
+  min-height: 90vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+}
+.inicio .contenedor .tiburon {
+  width: 600px;
+  position: relative;
+  z-index: 1;
+  left: -500px;
+}
+.inicio .contenedor .contenido {
+  text-align: right;
+  color: rgba(255, 255, 255, 0);
+  z-index: 1;
+  position: relative;
+  transition: all 2s ease 0.7s;
+}
+.inicio .contenedor .contenido h1 {
+  font-family: "Abril Fatface";
+  font-size: 6em;
+  padding: 10px 20px 20px 0;
+  padding-bottom: 20px;
+}
+.inicio .contenedor .contenido p {
+  font-family: "Alata";
+  font-size: 1.6em;
+  margin-left: 10px;
+  padding: 0 20px 0 0;
+}
+.inicio .contenedor .barra {
+  background-color: var(--azulMar);
+  width: 70%;
+  height: 300px;
+  position: absolute;
+  z-index: 0;
+  border-radius: 150px 0 0 150px;
+}
+
+@media (max-width: 800px) {
+  .inicio {
+    background-position-x: center;
+  }
+  .inicio .contenedor {
+    flex-direction: column;
+  }
+  .inicio .contenedor .tiburon {
+    width: 500px;
+  }
+  .inicio .contenedor .contenido {
+    text-align: center;
+  }
+  .inicio .contenedor .contenido h1 {
+    padding: 0 10px 20px 10px;
+  }
+  .inicio .contenedor .contenido p {
+    padding: 0 15px 40px 15px;
+    margin-left: 0;
+  }
+  .inicio .contenedor .barra {
+    width: 100%;
+    height: 250px;
+    border-radius: 0;
+  }
+}
+@media (max-width: 500px) {
+  .inicio {
+    background-position-x: center;
+  }
+  .inicio .contenedor {
+    height: 300px;
+    flex-direction: column;
+    justify-content: end;
+  }
+  .inicio .contenedor .tiburon {
+    width: 300px;
+    margin: 0 0 0 0;
+  }
+  .inicio .contenedor .contenido {
+    text-align: center;
+  }
+  .inicio .contenedor .contenido h1 {
+    padding: 10px 10px 20px 10px;
+    font-size: 3em;
+  }
+  .inicio .contenedor .contenido p {
+    padding: 0 15px 20px 15px;
+    margin-left: 0;
+    font-size: 1em;
+  }
+  .inicio .contenedor .barra {
+    width: 100%;
+    height: 25%;
+    border-radius: 0;
+  }
+}
+.informacion .contenedor {
+  padding: 20px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.informacion .contenedor .objeto {
+  padding: 20px;
+}
+.informacion .contenedor .objeto .icono {
+  width: 100px;
+  height: 100px;
+}
+.informacion .contenedor .texto {
+  color: var(--azulOscuro);
+  padding: 20px 60px;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: "Alata";
+}
+
+.lista-especies {
+  background-color: var(--azulOceano);
+  padding-bottom: 40px;
+}
+.lista-especies .contenedor {
+  padding: 20px;
+}
+.lista-especies .contenedor h2 {
+  color: var(--blanco);
+  font-family: "Alata";
+  margin: 0;
+  padding-left: 20px;
+  font-size: 3em;
+  padding-bottom: 20px;
+}
+.lista-especies .contenedor .container-especie {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.lista-especies .contenedor .container-especie .especie {
+  background-color: var(--blanco);
+  color: var(--azulOceano);
+  font-family: "Alata";
+  border-radius: 80px;
+  border-color: var(--azulOceano);
+  padding: 20px 50px;
+}
+.lista-especies .contenedor .container-especie .especie:hover {
+  background-color: var(--azulMar);
+  border-color: var(--azulMar);
+  color: var(--blanco);
+}
+
+@media (max-width: 800px) {
+  .lista-especies .contenedor .container-especie {
+    flex-flow: column wrap;
+    padding-top: 10px;
+  }
+  .lista-especies .contenedor .container-especie .especie {
+    padding: 20px 20px;
+  }
+}
+.info-especie {
+  background-image: url("../assets/fondo-dos.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.info-especie .contenedor .row {
+  padding: 0;
+}
+.info-especie .contenedor .row .info {
+  color: var(--blanco);
+  font-family: "Alata";
+  text-align: start;
+  padding: 0;
+}
+.info-especie .contenedor .row .info h1 {
+  font-size: 2.5em;
+  padding: 50px 0px 0px 30px;
+  font-size: 3em;
+}
+.info-especie .contenedor .row .info p {
+  padding: 20px 30px 10px 45px;
+  font-size: 1.6em;
+}
+.info-especie .contenedor .row .imagen {
+  padding: 0;
+  text-align: end;
+}
+.info-especie .contenedor .row .imagen img {
+  height: 80%;
+}
+
+.footer {
+  background-color: var(--negro);
+}
+.footer .contenedor {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.footer .contenedor p {
+  color: var(--blanco);
+  font-family: "Alata";
+  font-size: 1em;
+}/*# sourceMappingURL=styles.css.map */
